@@ -1,19 +1,20 @@
-# Pre: nota number 9 8 6
-# Post: lo traduzco a "Bueno", "Excelente", "Regular"
+''' Pre: nota number 9 8 6
+    Post: lo traduzco a "Bueno", "Excelente", "Regular"
+'''
 def a_nomenclatura_de_primaria(nota):
-    if nota == 10:
-        nota = "Excelente"
-    elif nota == 8 or nota == 9:
-        nota = "Sobresaliente"
-    elif nota == 7:
-        nota = "Aprobado"
-    elif nota >= 4 and nota <= 6:
-        nota = "Regular"
-    elif nota >= 1 and nota <= 3:
-        nota = "Desaprobado"
-    else:
-        nota = "Nota inválida"
-    return nota
+    switcher = {
+        10: "Excelente",
+        9: "Sobresaliente",
+        8: "Sobresaliente",
+        7: "Aprobado",
+        6: "Regular",
+        5: "Regular",
+        4: "Regular",
+        3: "Desaprobado",
+        2: "Desaprobado",
+        1: "Desaprobado"
+    }
+    return switcher.get(nota, "Nota inválida")
 
 def obtener_datos():
     nombre = input("Ingrese el nombre del estudiante: ")
