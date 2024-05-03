@@ -26,18 +26,7 @@ def mostrar_mensaje_final(nombre,materia,nota_en_formato_primaria):
     print("Alumno " + nombre + " , su nota de " + materia + " es " + nota_en_formato_primaria)
 
 
-
-def es_mayor_de_edad(edad):
-    if(edad >=18):
-        return True
-    else:
-        return False   
-    
-
-
 nombre, materia, nota_numerica = obtener_datos()
-
-
 nota_en_formato_primaria = a_nomenclatura_de_primaria(nota_numerica);
 mostrar_mensaje_final(nombre,materia,nota_en_formato_primaria);
 
