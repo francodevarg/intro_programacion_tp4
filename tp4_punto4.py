@@ -16,19 +16,23 @@ def a_nomenclatura_de_primaria(nota):
     }
     return switcher.get(nota, "Nota inválida")
 
-def obtener_datos():
-    nombre = input("Ingrese el nombre del estudiante: ")
-    materia = input("Ingrese el nombre de la materia: ")
-    nota = int(input("Ingrese la nota del estudiante en la materia: "))
+def obtener_datos_por_consola():
+    nombre = input("Ingrese el NOMBRE del estudiante: ")
+    materia = input("Ingrese la MATERIA: ")
+    nota = int(input("Ingrese la NOTA: "))
     return nombre, materia, nota
 
-def mostrar_mensaje_final(nombre,materia,nota_en_formato_primaria):
-    print("Alumno " + nombre + " , su nota de " + materia + " es " + nota_en_formato_primaria)
+def mostrar_mensaje_final_por_consola(nombre,materia,nota_en_formato_primaria):
+    print("Alumno " + nombre + 
+          " , su nota de " + materia + 
+          " es " + nota_en_formato_primaria)
 
-
-nombre, materia, nota_numerica = obtener_datos()
+'''
+=========================== Programa PRINCIPAL ===============================
+'''
+nombre, materia, nota_numerica = obtener_datos_por_consola()
 nota_en_formato_primaria = a_nomenclatura_de_primaria(nota_numerica);
-mostrar_mensaje_final(nombre,materia,nota_en_formato_primaria);
+mostrar_mensaje_final_por_consola(nombre,materia,nota_en_formato_primaria);
 
      
     
